@@ -140,3 +140,8 @@ button:focus-visible { outline: 2px solid #e6c99f; outline-offset: 4px; }
 @media(prefers-reduced-motion:reduce) {
   *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; }
 }
+@keyframes pageTurn {
+  from { opacity: .35; transform: perspective(900px) rotateY(-3deg) translateX(7px); }
+  to { opacity: 1; transform: perspective(900px) rotateY(0) translateX(0); }
+}
+.paper.page-turn { animation: pageTurn .42s ease both; }

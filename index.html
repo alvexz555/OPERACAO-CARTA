@@ -3,60 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#211916">
-  <meta name="description" content="Uma carta feita especialmente para você.">
-  <title>Uma carta para você</title>
+  <meta name="theme-color" content="#241a16">
+  <meta name="description" content="Uma carta antiga, escrita com carinho e guardada especialmente para você.">
+  <title>Carta Guardada</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Special+Elite&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="grain" aria-hidden="true"></div>
+  <div class="room-texture" aria-hidden="true"></div>
   <main class="app">
     <section class="screen intro active" id="intro">
-      <div class="ornament" aria-hidden="true">❧</div>
-      <p class="eyebrow">UMA CORRESPONDÊNCIA ESPECIAL</p>
-      <h1>Há algo que<br>guardei para você.</h1>
-      <p class="intro-copy">Algumas palavras merecem mais do que uma mensagem apressada.</p>
+      <div class="intro-ornament" aria-hidden="true">❧</div>
+      <p class="eyebrow">UMA CARTA QUE ESPEROU PARA SER LIDA</p>
+      <h1>Encontrei estas<br>palavras para você.</h1>
+      <p class="intro-copy">Algumas coisas merecem ser escritas à mão, mesmo quando o tempo passa.</p>
+
       <button class="envelope-button" id="open-letter" type="button" aria-label="Abrir a carta">
         <span class="envelope">
-          <span class="letter-peek">Para você</span>
-          <span class="flap"></span>
-          <span class="wax-seal">A</span>
+          <span class="envelope-back"></span>
+          <span class="letter-peek"><span>Para alguém especial</span><small>com carinho</small></span>
+          <span class="envelope-front"></span>
+          <span class="envelope-flap"></span>
+          <span class="wax-seal" aria-hidden="true">♥</span>
         </span>
-        <span class="open-hint">TOQUE PARA ABRIR</span>
+        <span class="open-hint">ABRIR A CARTA</span>
       </button>
-      <p class="small-note">Leia no seu tempo.</p>
+      <p class="small-note">Leia devagar. Não há pressa.</p>
     </section>
 
     <section class="screen reading" id="reading" aria-label="Leitura da carta">
+      <div class="desk-caption"><span>ARQUIVO PESSOAL</span><span>✦</span><span>UMA LEMBRANÇA</span></div>
       <header class="reading-header">
         <span class="chapter" id="chapter">CAPÍTULO I</span>
         <span class="page-number" id="page-number">01 / 03</span>
       </header>
-      <article class="paper">
-        <span class="paper-flourish top-flourish" aria-hidden="true">❧</span>
-        <p class="letter-date" id="letter-date">Com carinho,</p>
-        <h2 id="page-title">Antes de tudo...</h2>
-        <div class="letter-content" id="letter-content" aria-live="polite"></div>
-        <span class="paper-flourish bottom-flourish" aria-hidden="true">❧</span>
-      </article>
+      <div class="paper-stack">
+        <article class="paper" id="paper">
+          <span class="paper-date" id="letter-date">Com carinho,</span>
+          <h2 id="page-title">Antes de tudo...</h2>
+          <div class="letter-content" id="letter-content" aria-live="polite"></div>
+          <div class="paper-signoff" aria-hidden="true">❧</div>
+          <span class="paper-imprint" aria-hidden="true">C.G.</span>
+        </article>
+      </div>
       <nav class="controls" aria-label="Navegação da carta">
         <button class="back-button" id="previous" type="button" disabled>← Voltar</button>
         <div class="dots" id="dots" aria-hidden="true"></div>
-        <button class="next-button" id="next" type="button">Continuar →</button>
+        <button class="next-button" id="next" type="button">Próxima página →</button>
       </nav>
-      <p class="reading-note">Vire a página quando estiver pronto.</p>
+      <p class="reading-note">Cada página guarda um pedaço do que quero dizer.</p>
     </section>
 
     <section class="screen ending" id="ending">
-      <div class="ending-flower" aria-hidden="true">✿</div>
-      <p class="eyebrow">FIM DESTA CARTA, NÃO DO SENTIMENTO</p>
-      <h2>Com carinho,<br><span id="signature">Seu nome</span></h2>
+      <div class="ending-ornament" aria-hidden="true">✿</div>
+      <p class="eyebrow">UMA ÚLTIMA LINHA</p>
+      <h2>Com todo<br>meu carinho,</h2>
+      <p class="signature" id="signature">Seu nome</p>
       <p class="ending-message" id="ending-message"></p>
-      <button class="restart-button" id="read-again" type="button">Ler novamente</button>
-      <p class="small-note">Feito especialmente para você.</p>
+      <div class="closing-rule"><span>♥</span></div>
+      <button class="restart-button" id="read-again" type="button">Guardar e reler</button>
+      <p class="small-note">Algumas palavras merecem ser guardadas.</p>
     </section>
   </main>
   <script src="script.js"></script>

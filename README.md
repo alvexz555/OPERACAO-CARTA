@@ -1,18 +1,31 @@
-# Operação Carta
+# Carta Guardada
 
-Primeira versão de uma experiência de carta digital romântica, com estética vintage e leitura em múltiplas páginas.
+Uma pequena experiência romântica em formato de carta antiga. A pessoa encontra um envelope, rompe o selo de cera e percorre a mensagem em páginas, até chegar à assinatura.
+
+## Identidade visual
+- Papel creme envelhecido, com textura, manchas sutis e bordas irregulares.
+- Envelope de papel com selo de cera vermelho.
+- Tipografia serifada e manuscrita, em tons de tinta marrom e vinho.
+- Leitura em páginas com transição discreta.
+- Layout adaptado para celular e computador.
 
 ## Arquivos
-- `index.html`: telas e estrutura
-- `style.css`: identidade visual, envelope, papel e responsividade
-- `script.js`: conteúdo demonstrativo e navegação
-- `assets/`: reservado para imagens e sons
+- `index.html`: estrutura das telas e do envelope
+- `style.css`: identidade visual e responsividade
+- `script.js`: conteúdo da carta e navegação
+- `assets/`: reservado para recursos adicionais
 
-## Personalização
-Edite o objeto `LETTER` no início de `script.js`: saudação, assinatura, mensagem final e capítulos. O texto atual é demonstrativo; substitua antes de compartilhar.
+## Personalizar a carta
+Edite o objeto `LETTER` no início de `script.js`:
+- `date`: pequena saudação acima do texto
+- `signature`: assinatura no encerramento
+- `ending`: mensagem final
+- `pages`: capítulos, títulos e parágrafos
 
-## Publicação
-No GitHub, acesse Settings → Pages → Deploy from a branch, selecione `main` e `/(root)`.
+O texto incluído é apenas demonstrativo. Troque-o pela mensagem real antes de compartilhar.
+
+## Publicar com GitHub Pages
+No repositório, abra **Settings → Pages → Deploy from a branch**, escolha a branch desejada e a pasta `/(root)`. Salve e aguarde a publicação.
 
 ## Privacidade
-Este é um site estático. O conteúdo de JavaScript fica acessível a quem visita o site. Não inclua informações confidenciais.
+Este é um site estático. O conteúdo de `script.js` fica acessível a quem visitar a página. Não coloque dados pessoais ou informações que devam permanecer privadas.
